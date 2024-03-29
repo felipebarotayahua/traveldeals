@@ -13,7 +13,7 @@
 //     // Object to be inserted
 //     let dataObj = {};
 //     dataObj.email_address = parsedMsg.email_address;
-//     dataObj.watch_regions = parsedMsg.watch_regions;
+//     dataObj.watch_regions = parsedMsg.watch_region;
 
 //     // Write the object into Firestore
 //     let collectionRef = firestore.collection('subscribers');
@@ -40,8 +40,8 @@ exports.subscriberToDb = async (message, context) => {
     dataObj.email_address = parsedMsg.email_address;
     
     // Check if watch_regions is defined before assigning it
-    if (parsedMsg.watch_regions !== undefined) {
-        dataObj.watch_regions = parsedMsg.watch_regions;
+    if (parsedMsg.watch_region !== undefined) {
+        dataObj.watch_region = parsedMsg.watch_region;
     }
 
     // Write the object into Firestore
