@@ -45,7 +45,7 @@ exports.sendDeal = (event, context) => {
             const msg = {
                 to: doc.data().email_address,
                 from: process.env.SENDGRID_SENDER,
-                subject: `(user) ${event.value.fields.headline.stringValue}`,
+                subject: `(FELIPE) ${event.value.fields.headline.stringValue}`,
                 text: "HERE ARE SOME GREAT DEALS!",
                 html: "HERE ARE SOME GREAT DEALS!"
             };
